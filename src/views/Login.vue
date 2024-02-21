@@ -14,7 +14,7 @@ const onSubmit = async () => {
     <q-card flat bordered class="q-pa-md" style="width: 360px">
       <q-form @submit.stop="onSubmit" class="q-gutter-md">
         <q-card-section class="q-mb-none">
-          <div class="text-h6 text-center">로그인</div>
+          <div class="text-h6 text-center">2로그인2</div>
         </q-card-section>
         <q-card-section class="q-mb-none q-gutter-y-lg">
           <q-btn
