@@ -3,7 +3,7 @@ def gitBranch = 'master'
 def docker_registry = "ghcr.io"  
 
 // 본인 이미지 사용
-def imageName = "ghcr.io/kt-cloudnative/vue_crud_security_keycloak"
+def imageName = "ghcr.io/kyleee0522/vue_crud_security_keycloak"
 def git_ops_name = "app-of-apps-keycloak"
 def kust_dir = "charts/frontend"
 // 본인 Namespace
