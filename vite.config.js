@@ -16,6 +16,7 @@ export default defineConfig({
   //lcocal test 시 주석 삭제
   // ---- Start -----
   //server: {
+<<<<<<< HEAD
     //host: 'localhost',
     //port: 3000,
     //proxy: {
@@ -25,6 +26,17 @@ export default defineConfig({
         //changeOrigin: true,
       //},
     //},
+=======
+  //  host: 'localhost',
+  //  port: 3000,
+  //  proxy: {
+  //    '/api': {
+  //      //target: 'http://localhost:9080',
+  //      target: 'http://211.43.12.162:30589',
+  //      changeOrigin: true,
+  //    },
+  //  },
+>>>>>>> 6ac6998b84b35bb2ab86604121a1e245b821ae76
   //},
   // ---- end -----
   //lcocal test 시 주석 삭제

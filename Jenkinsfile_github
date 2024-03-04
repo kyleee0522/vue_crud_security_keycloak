@@ -3,14 +3,15 @@ def gitBranch = 'master'
 def docker_registry = "ghcr.io"  
 
 // 본인 이미지 사용
-def imageName = "ghcr.io/kt-cloudnative/vue_crud_security"
-def git_ops_name = "frontend-gitops-kust"
+def imageName = "ghcr.io/kyleee0522/vue_crud_security_keycloak"
+def git_ops_name = "app-of-apps-keycloak"
+def kust_dir = "charts/frontend"
 // 본인 Namespace
-def P_NAMESPACE = "devops"
+def P_NAMESPACE = "default"
 // 본인 slave pvc
-def P_SLAVE_PVC = "jenkins-edu-slave-pvc"
+def P_SLAVE_PVC = "jenkins-edu1-slave-pvc"
 // 본인 이메일
-def P_EMAIL = "shclub@gmail.com"
+def P_EMAIL = "kyleee05222@gmail.com"
 
 
 def TAG = getTag(gitBranch)
@@ -54,7 +55,7 @@ podTemplate(label: label, serviceAccount: 'jenkins-admin', namespace: P_NAMESPAC
                     sh """  
                         cd ~
                         git clone https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/${git_ops_name}
-                        cd ${git_ops_name}
+                        cd ${git_ops_name}/${kust_dir}
                         git checkout HEAD
                         kustomize edit set image ${imageName}:${TAG}
                         git config --global user.email ${P_EMAIL}
